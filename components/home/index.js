@@ -3,6 +3,7 @@ import { Image, View, StatusBar } from "react-native";
 
 import { Container, Button, H3, Text, Header, Title, Body, Left, Right, Icon } from "native-base";
 
+import Home from "./Home.js"
 import styles from "./styles";
 
 const launchscreenBg = require("../../img/home.jpeg");
