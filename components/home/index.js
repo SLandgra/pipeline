@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, Dimensions } from "react-native";
+import { Image, Dimensions, TouchableOpacity, } from "react-native";
 
 import {
   Container,
@@ -18,13 +18,28 @@ import {
   Thumbnail
 } from "native-base";
 
+const companies = [{
+  name: 'slack',
+  applied: 6,
+  replied: 4
+},
+{
+  name: 'google',
+  applied: 5,
+  replied: 0},
+{
+  name: 'twitter',
+  applied: 3,
+  replied: 1
+}]
+
 const deviceWidth = Dimensions.get("window").width;
 
 import styles from "./styles";
 
+
 class Header6 extends Component {
   // eslint-disable-line
-
   render() {
     return (
       <Container style={styles.container}>
@@ -39,23 +54,26 @@ class Header6 extends Component {
         </Header>
 
         <Content padder>
+        {companies.map((company) => {return(
+          <TouchableOpacity style={styles.touch} onPress={()=>this.props.navigation.navigate("SingleCompany")}>
           <Card style={styles.mb}>
             <CardItem bordered>
               <Left>
                 <Body>
-                  <Text>Slack</Text>
+                  <Text>{company.name}</Text>
                 </Body>
               </Left>
             </CardItem>
-
             <CardItem>
               <Body>
                 <Text>
-                  You applied to 6 jobs here! 3/4 have responded to you.
+                  You applied to {company.applied} job(s) here! {company.replied}/{company.applied} have responded to you.
                 </Text>
               </Body>
             </CardItem>
           </Card>
+          </TouchableOpacity>
+        )})}
         </Content>
       </Container>
     );

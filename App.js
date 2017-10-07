@@ -11,11 +11,13 @@ import { StackNavigator } from "react-navigation";
 import Login from "./components/login/index";
 import Home from "./components/home/index";
 import NewJob from "./components/newJob/index";
+import SingleCompany from "./components/singleCompany/index";
 const AppNavigator = StackNavigator({
   Login: {screen: Login},
 
   Home: {screen: Home},
-  NewJob: {screen: NewJob}
+  NewJob: {screen: NewJob},
+  SingleCompany: {screen: SingleCompany}
 },
 {
   initialRouteName: "Login",
