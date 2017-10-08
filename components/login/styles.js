@@ -16,7 +16,7 @@ export default {
     marginBottom: deviceHeight / 4
   },
   text: {
-    fontFamily: 'serif',
+    // fontFamily: 'serif',
     fontSize: 30,
     bottom: 6,
     marginTop: 5

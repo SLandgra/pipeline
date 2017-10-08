@@ -16,7 +16,9 @@
       "assetExts": ["ttf", "mp4"]
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pipeline.pipeline",
+      "ios.config.googleSignIn.reservedClientId": "com.googleusercontent.apps.349814409912-f8s2r8piliiqtkvs755g37jut80e11qt"
     }
-  }
+    }
 }
